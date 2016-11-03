@@ -56,3 +56,123 @@ notifying browser that file changed:  out/testing_reagent/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.132 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.175 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.109 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:10  column:79  ----[0m
+
+  [1mMap literal must contain an even number of forms[0m
+
+  [36m 8[0m  [36m(defonce app-state (atom [0m
+  [36m 9[0m  [36m                      {:counters {1 {:id 1 :name "Build App" :count 0}}[0m
+  [33m10[0m  [1m                                 {2 {:id 2 :name "Break Something" :count 0}}}))[0m
+  [0m  [0m  [33m                                                                              ^--- Map literal must contain an even number of forms[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(defn hello-world [][0m
+  [36m13[0m  [36m  [:div[0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.109 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:10  column:79  ----[0m
+
+  [1mMap literal must contain an even number of forms[0m
+
+  [36m 8[0m  [36m(defonce app-state (atom [0m
+  [36m 9[0m  [36m                      {:counters {1 {:id 1 :name "Build App" :count 0}}[0m
+  [33m10[0m  [1m                                 {2 {:id 2 :name "Break Something" :count 0}}}))[0m
+  [0m  [0m  [33m                                                                              ^--- Map literal must contain an even number of forms[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(defn increment-counter [c][0m
+  [36m13[0m  [36m  (swap! app-state update-in [:counters (:id c) :count] inc))[0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.105 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:10  column:79  ----[0m
+
+  [1mMap literal must contain an even number of forms[0m
+
+  [36m 8[0m  [36m(defonce app-state (atom [0m
+  [36m 9[0m  [36m                      {:counters {1 {:id 1 :name "Build App" :count 0}}[0m
+  [33m10[0m  [1m                                 {2 {:id 2 :name "Break Something" :count 0}}}))[0m
+  [0m  [0m  [33m                                                                              ^--- Map literal must contain an even number of forms[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(defn increment-counter [c][0m
+  [36m13[0m  [36m  (swap! app-state update-in [:counters (:id c) :count] inc))[0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.176 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:26  column:22  ----[0m
+
+  [1mMetadata must be Symbol, Keyword, String or Map[0m
+
+  [36m24[0m  [36m    [:h1 "Chore tracking"][0m
+  [36m25[0m  [36m    (for [c (vals (:counters @app-state))][0m
+  [33m26[0m  [1m      ^[:key (:id c)][0m
+  [0m  [0m  [33m                     ^--- Metadata must be Symbol, Keyword, String or Map[0m
+  [36m27[0m  [36m      [counter-view c])])[0m
+  [36m28[0m  [36m[0m
+  [36m29[0m  [36m(reagent/render-component [hello-world][0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.155 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.105 seconds.[0m
+[36m----  Could not Analyze  src/cljs/testing_reagent/core.cljs   line:25  column:5  ----[0m
+
+  [1mWrong number of args (3) passed to: core/for[0m
+
+  [36m23[0m  [36m[:div[0m
+  [36m24[0m  [36m  [:h1 "Chore tracking"][0m
+  [33m25[0m  [1m  (for [c (vals (:counters @app-state))][0m
+  [0m  [0m  [33m  ^--- Wrong number of args (3) passed to: core/for[0m
+  [36m26[0m  [36m    [:key (:id c)][0m
+  [36m27[0m  [36m    [counter-view c])])[0m
+
+[36m----  Analysis Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.099 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:26  column:22  ----[0m
+
+  [1mMetadata must be Symbol, Keyword, String or Map[0m
+
+  [36m24[0m  [36m    [:h1 "Chore tracking"][0m
+  [36m25[0m  [36m    (for [c (vals (:counters @app-state))][0m
+  [33m26[0m  [1m      ^[:key (:id c)][0m
+  [0m  [0m  [33m                     ^--- Metadata must be Symbol, Keyword, String or Map[0m
+  [36m27[0m  [36m      [counter-view c])])[0m
+  [36m28[0m  [36m[0m
+  [36m29[0m  [36m(reagent/render-component [hello-world][0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 26 22) No :open-file-command supplied in the config.
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 26 22) No :open-file-command supplied in the config.
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.221 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.149 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.137 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.139 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
