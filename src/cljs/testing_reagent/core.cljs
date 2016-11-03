@@ -24,6 +24,22 @@
        new-counter {:id next-id :name text :count 0}]
     (swap! app-state update-in [:counters] assoc next-id new-counter)))
 
+
+
+;; EXPLAINATION OF ON CHANGE LINE IN NEW COUNTER FUNCTION 
+
+;; we can also write this as
+;;(fn [event] (reset! text (-> event .-target .-value))
+;; (fn [event] (reset! text (.-value (.-target event)))
+;; so the hash `#` is making an anonymous function whose first parameter is `%`
+;;  `->` is the threading macro which i'm not sure how to explain succinctly
+;; it takes a value and then _threads_ it though the following forms
+;; the `(.-value (.-target event)` are javascript concepts
+;; an event in javascript has a target, the element that was changed
+;; an element can have a value, in this case the input's text
+
+
+
 (defn new-counter []
   (let [text (atom "")]
     (fn []
