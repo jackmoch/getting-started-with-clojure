@@ -38,7 +38,12 @@
 ;; an event in javascript has a target, the element that was changed
 ;; an element can have a value, in this case the input's text
 
-
+(defn timer-component []
+  (let [seconds-elapsed (atom 0)]
+    (fn []
+      (js/setTimeout #(swap! seconds-elapsed inc) 1000)
+      [:div
+       "Seconds Elapsed: " @seconds-elapsed])))
 
 (defn new-counter []
   (let [text (atom "")]
@@ -53,6 +58,7 @@
   [:div.container
     [:h1 "Chore tracking"]
     [new-counter]
+    [timer-component]
     (for [c (vals (:counters @app-state))]
       ^{:key (:id c)}
       [counter-view c])])

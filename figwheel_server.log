@@ -389,3 +389,65 @@ notifying browser that file changed:  out/testing_reagent/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.143 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:42  column:26  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or Closure namespace ""[0m
+
+  [36m38[0m  [36m;; an event in javascript has a target, the element that was changed[0m
+  [36m39[0m  [36m;; an element can have a value, in this case the input's text[0m
+  [36m40[0m  [36m[0m
+  [36m41[0m  [36m(defn timer-component [][0m
+  [33m42[0m  [1m  (let [seconds-elapsed (r/atom 0)][0m
+  [0m  [0m  [33m                         ^--- No such namespace: r, could not locate r.cljs, r.cljc, or Closure namespace ""[0m
+  [36m43[0m  [36m    (fn [][0m
+  [36m44[0m  [36m      (js/setTimeout #(swap! seconds-elapsed inc) 1000)[0m
+  [36m45[0m  [36m      [:div[0m
+  [36m46[0m  [36m       "Seconds Elapsed: " @seconds-elapsed])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:42  column:26  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m38[0m  [36m;; an event in javascript has a target, the element that was changed[0m
+  [36m39[0m  [36m;; an element can have a value, in this case the input's text[0m
+  [36m40[0m  [36m[0m
+  [36m41[0m  [36m(defn timer-component [][0m
+  [33m42[0m  [1m  (let [seconds-elapsed (r/atom 0)][0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var r/atom[0m
+  [36m43[0m  [36m    (fn [][0m
+  [36m44[0m  [36m      (js/setTimeout #(swap! seconds-elapsed inc) 1000)[0m
+  [36m45[0m  [36m      [:div[0m
+  [36m46[0m  [36m       "Seconds Elapsed: " @seconds-elapsed])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.215 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.156 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.108 seconds.[0m
+[36m----  Could not Read  src/cljs/testing_reagent/core.cljs   line:44  column:24  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m42[0m  [36m(let [seconds-elapsed (atom 0)][0m
+  [36m43[0m  [36m  #([0m
+  [33m44[0m  [1m    (js/setTimeout #(swap! seconds-elapsed inc) 1000)[0m
+  [0m  [0m  [33m                     ^--- Nested #()s are not allowed[0m
+  [36m45[0m  [36m    [:div[0m
+  [36m46[0m  [36m     "Seconds Elapsed: " @seconds-elapsed])))[0m
+
+[36m----  Reader Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.169 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
