@@ -32,4 +32,4 @@ goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.c
 goog.addDependency("../figwheel/client/heads_up.js", ['figwheel.client.heads_up'], ['goog.dom', 'goog.string', 'cljs.core', 'goog.dom.dataset', 'goog.object', 'cljs.core.async', 'cljs.pprint', 'figwheel.client.socket', 'clojure.string']);
 goog.addDependency("../cljs/repl.js", ['cljs.repl'], ['cljs.core']);
 goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgent.product', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'figwheel.client.file_reloading', 'figwheel.client.utils', 'cljs.repl', 'figwheel.client.heads_up', 'figwheel.client.socket', 'clojure.string', 'cljs.reader']);
-goog.addDependency("../1C593F4.js", ['figwheel.connect.dev'], ['cljs.core', 'figwheel.client', 'figwheel.client.utils', 'testing_reagent.core']);
+goog.addDependency("../0B5E3AA.js", ['figwheel.connect.dev'], ['cljs.core', 'figwheel.client', 'figwheel.client.utils', 'testing_reagent.core']);

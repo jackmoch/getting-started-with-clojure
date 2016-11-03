@@ -20,7 +20,7 @@
       [:button.btn.btn-default {:on-click #(increment-counter c)} "Did it!"]]])
 
 (defn hello-world []
-  [:div
+  [:div.container
     [:h1 "Chore tracking"]
     (for [c (vals (:counters @app-state))]
       ^{:key (:id c)}
