@@ -451,3 +451,31 @@ notifying browser that file changed:  out/testing_reagent/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.138 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.353 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.339 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.298 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.275 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.318 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.281 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
