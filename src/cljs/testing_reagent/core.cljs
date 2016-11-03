@@ -1,42 +1,13 @@
 (ns testing-reagent.core
   (:require
-   [reagent.core :as reagent]
+   [reagent.core :as reagent :refer [atom]]
    ))
 
+(defonce app-state (atom {:text "Hello world"}))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Vars
+(defn hello-world []
+  [:div
+    [:h1 (:text @app-state)]])
 
-(defonce debug?
-  ^boolean js/goog.DEBUG)
-
-(defonce app-state
-  (reagent/atom
-   {:text "Hello, what is your name? "}))
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Page
-
-(defn page [ratom]
-  [:p (:text @ratom) "FIXME"])
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Initialize App
-
-(defn dev-setup []
-  (when debug?
-    (enable-console-print!)
-    (println "dev mode")
-    ))
-
-(defn reload []
-  (reagent/render [page app-state]
-                  (.getElementById js/document "app")))
-
-(defn ^:export main []
-  (dev-setup)
-  (reload))
+(reagent/render-component [hello-world]
+  (. js/document (getElementById "app")))

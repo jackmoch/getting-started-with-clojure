@@ -1,0 +1,46 @@
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.283 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.201 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:35  column:20  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/page[0m
+
+  [36m31[0m  [36m    (println "dev mode")[0m
+  [36m32[0m  [36m    ))[0m
+  [36m33[0m  [36m[0m
+  [36m34[0m  [36m(defn reload [][0m
+  [33m35[0m  [1m  (reagent/render [page app-state][0m
+  [0m  [0m  [33m                   ^--- Use of undeclared Var testing-reagent.core/page[0m
+  [36m36[0m  [36m                  (.getElementById js/document "app")))[0m
+  [36m37[0m  [36m[0m
+  [36m38[0m  [36m(defn ^:export main [][0m
+  [36m39[0m  [36m  (dev-setup)[0m
+  [36m40[0m  [36m  (reload))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.306 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.604 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.112 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.116 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
