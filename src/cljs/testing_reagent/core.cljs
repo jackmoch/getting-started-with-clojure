@@ -19,18 +19,24 @@
     [:div.col-sm-4
       [:button.btn.btn-default {:on-click #(increment-counter c)} "Did it!"]]])
 
+(defn add-counter [text]
+  (let [next-id (inc (count (keys (:counters @app-state))))
+       new-counter {:id next-id :name text :count 0}]
+    (swap! app-state update-in [:counters] assoc next-id new-counter)))
+
 (defn new-counter []
   (let [text (atom "")]
     (fn []
-      [:div.row
+      [:div.row.container
         [:div.col-sm-10
           [:input.form-control {:type "text" :value @text
                                 :on-change #(reset! text (-> % .-target .-value))}]]
-          [:button.btn.btn-success {:onclick #(add-counter @text)} "Add"]])))
+          [:button.btn.btn-success {:on-click #(add-counter @text)} "Add"]])))
 
 (defn hello-world []
   [:div.container
     [:h1 "Chore tracking"]
+    [new-counter]
     (for [c (vals (:counters @app-state))]
       ^{:key (:id c)}
       [counter-view c])])
