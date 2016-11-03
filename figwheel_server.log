@@ -188,3 +188,152 @@ notifying browser that file changed:  out/testing_reagent/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.167 seconds.[0m
 notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
 notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:23  column:3  ----[0m
+
+  [1mCan't take value of macro cljs.core/let[0m
+
+  [36m19[0m  [36m    [:div.col-sm-4[0m
+  [36m20[0m  [36m      [:button.btn.btn-default {:on-click #(increment-counter c)} "Did it!"]]])[0m
+  [36m21[0m  [36m[0m
+  [36m22[0m  [36m(defn new-counter [][0m
+  [33m23[0m  [1m  let [text (atom "")[0m
+  [0m  [0m  [33m  ^--- Can't take value of macro cljs.core/let[0m
+  [36m24[0m  [36m    (fn [][0m
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          :input.form-control {:type "text" :value @text[0m
+  [36m28[0m  [36m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:23  column:8  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/text[0m
+
+  [36m19[0m  [36m    [:div.col-sm-4[0m
+  [36m20[0m  [36m      [:button.btn.btn-default {:on-click #(increment-counter c)} "Did it!"]]])[0m
+  [36m21[0m  [36m[0m
+  [36m22[0m  [36m(defn new-counter [][0m
+  [33m23[0m  [1m  let [text (atom "")[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var testing-reagent.core/text[0m
+  [36m24[0m  [36m    (fn [][0m
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          :input.form-control {:type "text" :value @text[0m
+  [36m28[0m  [36m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:27  column:53  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/text[0m
+
+  [36m23[0m  [36m  let [text (atom "")[0m
+  [36m24[0m  [36m    (fn [][0m
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [33m27[0m  [1m          :input.form-control {:type "text" :value @text[0m
+  [0m  [0m  [33m                                                    ^--- Use of undeclared Var testing-reagent.core/text[0m
+  [36m28[0m  [36m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+  [36m29[0m  [36m          [:button.btn.btn-success {:on-click #(add-counter @text)} "Add"])])[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hello-world [][0m
+  [36m32[0m  [36m  [:div.container[0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:28  column:52  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/text[0m
+
+  [36m24[0m  [36m    (fn [][0m
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          :input.form-control {:type "text" :value @text[0m
+  [33m28[0m  [1m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+  [0m  [0m  [33m                                                   ^--- Use of undeclared Var testing-reagent.core/text[0m
+  [36m29[0m  [36m          [:button.btn.btn-success {:on-click #(add-counter @text)} "Add"])])[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hello-world [][0m
+  [36m32[0m  [36m  [:div.container[0m
+  [36m33[0m  [36m    [:h1 "Chore tracking"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:29  column:49  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/add-counter[0m
+
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          :input.form-control {:type "text" :value @text[0m
+  [36m28[0m  [36m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+  [33m29[0m  [1m          [:button.btn.btn-success {:on-click #(add-counter @text)} "Add"])])[0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var testing-reagent.core/add-counter[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hello-world [][0m
+  [36m32[0m  [36m  [:div.container[0m
+  [36m33[0m  [36m    [:h1 "Chore tracking"][0m
+  [36m34[0m  [36m    (for [c (vals (:counters @app-state))][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:29  column:62  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/text[0m
+
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          :input.form-control {:type "text" :value @text[0m
+  [36m28[0m  [36m                               :on-change #(reset! text (-> % .-target .-value))}]][0m
+  [33m29[0m  [1m          [:button.btn.btn-success {:on-click #(add-counter @text)} "Add"])])[0m
+  [0m  [0m  [33m                                                             ^--- Use of undeclared Var testing-reagent.core/text[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hello-world [][0m
+  [36m32[0m  [36m  [:div.container[0m
+  [36m33[0m  [36m    [:h1 "Chore tracking"][0m
+  [36m34[0m  [36m    (for [c (vals (:counters @app-state))][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.417 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 23 8) No :open-file-command supplied in the config.
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 27 53) No :open-file-command supplied in the config.
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 23 3) No :open-file-command supplied in the config.
+Figwheel: Can't open  ("src/cljs/testing_reagent/core.cljs" 23 3) No :open-file-command supplied in the config.
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.162 seconds.[0m
+[36m----  Could not Analyze  src/cljs/testing_reagent/core.cljs   line:23  column:3  ----[0m
+
+  [1mlet requires an even number of forms in binding vector[0m
+
+  [36m22[0m  [36m(defn new-counter [][0m
+  [33m23[0m  [1m  (let [text (atom "")[0m
+  [0m  [0m  [33m  ^--- let requires an even number of forms in binding vector[0m
+  [36m24[0m  [36m    (fn [][0m
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+
+[36m----  Analysis Error : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.241 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/testing_reagent/core.cljs   line:29  column:48  ----[0m
+
+  [1mUse of undeclared Var testing-reagent.core/add-counter[0m
+
+  [36m25[0m  [36m      [:div.row[0m
+  [36m26[0m  [36m        [:div.col-sm-10[0m
+  [36m27[0m  [36m          [:input.form-control {:type "text" :value @text[0m
+  [36m28[0m  [36m                                :on-change #(reset! text (-> % .-target .-value))}]][0m
+  [33m29[0m  [1m          [:button.btn.btn-success {:onclick #(add-counter @text)} "Add"]])))[0m
+  [0m  [0m  [33m                                               ^--- Use of undeclared Var testing-reagent.core/add-counter[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hello-world [][0m
+  [36m32[0m  [36m  [:div.container[0m
+  [36m33[0m  [36m    [:h1 "Chore tracking"][0m
+  [36m34[0m  [36m    (for [c (vals (:counters @app-state))][0m
+
+[36m----  Compiler Warning : Please see src/cljs/testing_reagent/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 0.329 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/testing_reagent/core.js

@@ -19,6 +19,15 @@
     [:div.col-sm-4
       [:button.btn.btn-default {:on-click #(increment-counter c)} "Did it!"]]])
 
+(defn new-counter []
+  (let [text (atom "")]
+    (fn []
+      [:div.row
+        [:div.col-sm-10
+          [:input.form-control {:type "text" :value @text
+                                :on-change #(reset! text (-> % .-target .-value))}]]
+          [:button.btn.btn-success {:onclick #(add-counter @text)} "Add"]])))
+
 (defn hello-world []
   [:div.container
     [:h1 "Chore tracking"]
