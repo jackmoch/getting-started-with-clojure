@@ -41,3 +41,15 @@ The following prompts should be run in your terminal
 [A Look At The History/Future of ClojureScript](https://www.youtube.com/watch?v=mty0RwkPmE8&list=PLUGkVn388pDI-xCI6aIAt4Yxoui4QdeYt&index=2)
 
 [Live Coding With ClojureScript/Reagent](https://www.youtube.com/watch?v=wq6ctyZBb0A&list=PLUGkVn388pDI-xCI6aIAt4Yxoui4QdeYt&index=5)
+
+##Why Clojure/ClojureScript/Functional Programming?
+
+[Clojure Made Simple](https://www.youtube.com/watch?v=VSdnJDO-xdg)
+
+[Simple Made Easy](https://www.youtube.com/watch?v=rI8tNMsozo0)
+
+[The Value of Values](https://www.youtube.com/watch?v=-6BsiVyC1kM&list=PLRZ9CBXkZGmPtdCa8veT_fa5auxuI-BKi)
+
+[Hammock Driven Development](https://www.youtube.com/watch?v=f84n5oFoZBc)
+
+[The Language of the System](https://www.youtube.com/watch?v=ROor6_NGIWU)
