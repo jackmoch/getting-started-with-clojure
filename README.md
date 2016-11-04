@@ -36,7 +36,7 @@ Clojure is notated using lists: `(a b c)`, vectors: `[a b c]`, and maps: `{:a 1 
 
 Here is some boilerplate code that you can copy and paste into `src/cljs/<project-name>/core.cljs`:
 
-```
+```Clojure
 (ns <project-name>.core
   (:require
    [reagent.core :as reagent :refer [atom]]
@@ -58,7 +58,7 @@ It will simply render "Hello world" on the page.
 
 The following block introduces your project name as the core namespace, requires the reagent core as the symbol `reagent`, and pulls `atom` out of the reagent core library. The require statement could be written as `import reagent, { atom } from 'reagent'` in an ES6 JavaScript syntax.
 
-```
+```Clojure
 (ns <project-name>.core
   (:require
    [reagent.core :as reagent :refer [atom]]
@@ -67,13 +67,13 @@ The following block introduces your project name as the core namespace, requires
 
 The folloing block defines the app-state as an atom with a key of :text and a value of "Hello world".
 
-```
+```Clojure
 (defonce app-state (atom {:text "Hello world"}))
 ```
 
 The following defines a function called hello-world, which accepts no arguments `[]`, followed by a div which contains an h1 element with a value of `(:text @app-state)`. The `@` character is used to dereference the app-state symbol and `:text` pulls out the value contained in the `:text` key.
 
-```
+```Clojure
 (defn hello-world []
   [:div
     [:h1 (:text @app-state)]])
@@ -81,14 +81,14 @@ The following defines a function called hello-world, which accepts no arguments 
 
 Finally, this last block pulls the `render-component` function out of the reagent library, passes it the hello-world function, which returns our div containing an h1 with the value of the app-state key. It then uses the `.getElementById` JavaScript function to locate the html element with an id of app, which contained in our index.html file in the `resource/public/index.html` file. 
 
-```
+```Clojure
 (reagent/render-component [hello-world]
   (. js/document (getElementById "app")))
 ```
 
 Note that we are explicitly using the reagent library with ClojureScript in this example, which builds on top of the React framework. This last line is the equivalent of React's:
 
-```
+```Javascript
 ReactDOM.render(
   <hello-world />,
   document.getElementById("app")
