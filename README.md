@@ -106,6 +106,8 @@ ReactDOM.render(
 
 [Free Online Book on Clojure](http://www.braveclojure.com/foreword/)
 
+[Functional Programming Terms Explained](https://github.com/hemanth/functional-programming-jargon)
+
 ###Videos
 
 [SPA with ClojureScript/Reagent](https://www.youtube.com/watch?v=HucWRsXUwqw&list=PLUGkVn388pDI-xCI6aIAt4Yxoui4QdeYt)
