@@ -28,9 +28,9 @@ The following prompts should be run in your terminal
 
 [Clojure](http://clojure.org/) is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) and a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. It was written by Rich Hickey, and released in 2007. 
 
-Clojure and ClojureScript differ main in the fact that Clojure runs on the JVM (Java Virtual Machine) platform and compiles down to Java bytecode, where as ClojureScript compiles to JavaScript. Syntactically Clojure is very minimalistic, mainly expressing itself via data structures. 
+Clojure and [ClojureScript](https://clojurescript.org/) differ main in the fact that Clojure runs on the [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) (Java Virtual Machine) platform and compiles down to [Java bytecode](https://en.wikipedia.org/wiki/Java_bytecode), where as ClojureScript compiles to JavaScript. Syntactically Clojure is very minimalistic, mainly expressing itself via [persistent data structures](https://en.wikipedia.org/wiki/Persistent_data_structure). 
 
-Clojure is mainly expressed using lists: `(a b c)`, vectors: `[a b c]`, and maps: `{:a 1 :b 2 :c 3}` which act as key value pairs. Clojure uses the Lisp s-expression as it's common notation. For example to add the integers 2 and 4 one would write `(+ 2 4)` which would evaluate to 6. 
+Clojure is notated using lists: `(a b c)`, vectors: `[a b c]`, and maps: `{:a 1 :b 2 :c 3}` which act as key value pairs. Clojure uses the Lisp [s-expression](https://en.wikipedia.org/wiki/S-expression) to build it's data structures. For example to add the integers 2 and 4 one would write `(+ 2 4)` which would evaluate to 6. 
 
 ##Play With Code
 
