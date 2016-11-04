@@ -54,32 +54,39 @@ Here is some boilerplate code that you can copy and paste into `src/cljs/<projec
 
 It will simply render "Hello world" on the page.
 
+##Example Explained
 
+This block introduces your project name as the core namespace, requires the reagent core as the symboly reagent, and pulls atom out of the reagent core library. The require statement could be written as `import reagent, { atom } from 'reagent'` in an ES6 JavaScript syntax.
 ```
 (ns <project-name>.core
   (:require
    [reagent.core :as reagent :refer [atom]]
    ))
 ```
-This block introduces your project name as the core namespace, requires the reagent core as the symboly reagent, and pulls atom out of the reagent core library. The require statement could be written as `import reagent, { atom } from 'reagent'` in an ES6 JavaScript syntax.
+This block defines the app-state as an atom with a key of :text and a value of "Hello world".
 
 ```
 (defonce app-state (atom {:text "Hello world"}))
 ```
-This block defines the app-state as an atom with a key of :text and a value of "Hello world".
+
+This block defines a function called hello-world, which accepts no arguments `[]`, followed by a div which contains an h1 element with a value of `(:text @app-state)`. The `@` character is used to dereference the app-state symbol and `:text` pulls out the value contained in the `:text` key.
 
 ```
 (defn hello-world []
   [:div
     [:h1 (:text @app-state)]])
 ```
-This block defines a function called hello-world, which accepts no arguments `[]`, followed by a div which contains an h1 element with a value of `(:text @app-state)`. The `@` character is used to dereference the app-state symbol and `:text` pulls out the value contained in the `:text` key.
+
+Finally, this line pulls the render-component function out of the reagent library, passes it the hello-world function, which returns our div containing an h1 with the value of the app-state key, and then uses the `.getElementById` JavaScript function to locate the html element with an id of app, contained in our index.html file in the `resource/public/index.html` file. 
 
 ```
 (reagent/render-component [hello-world]
   (. js/document (getElementById "app")))
 ```
-Finally, this line pulls the render-component function out of the reagent library, passes it the hello-world function, which returns our div containing an h1 with the value of the app-state key, and then uses the `.getElementById` JavaScript function to locate the html element with an id of app, contained in our index.html file in the `resource/public/index.html` file. Note that we are explicitly using the reagent library of ClojureScript in this example, which builds on top of the  React framework. This last line is the equivalent of React's:
+
+
+Note that we are explicitly using the reagent library of ClojureScript in this example, which builds on top of the  React framework. This last line is the equivalent of React's:
+
 ```
 ReactDOM.render(
   <hello-world />,
@@ -87,7 +94,8 @@ ReactDOM.render(
 )
 ```               
 
-##Resources
+
+###Resources
 
 [Reagent Github Repo](https://github.com/reagent-project/reagent)
 
@@ -97,7 +105,7 @@ ReactDOM.render(
 
 [Free Online Book on Clojure](http://www.braveclojure.com/foreword/)
 
-##Videos
+###Videos
 
 [SPA with ClojureScript/Reagent](https://www.youtube.com/watch?v=HucWRsXUwqw&list=PLUGkVn388pDI-xCI6aIAt4Yxoui4QdeYt)
 
@@ -105,7 +113,7 @@ ReactDOM.render(
 
 [Live Coding With ClojureScript/Reagent](https://www.youtube.com/watch?v=wq6ctyZBb0A&list=PLUGkVn388pDI-xCI6aIAt4Yxoui4QdeYt&index=5)
 
-##Why Clojure/ClojureScript/Functional Programming?
+###Why Clojure/ClojureScript/Functional Programming?
 
 [Clojure Made Simple](https://www.youtube.com/watch?v=VSdnJDO-xdg)
 
