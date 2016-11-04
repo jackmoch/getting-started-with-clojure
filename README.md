@@ -28,9 +28,9 @@ The following prompts should be run in your terminal
 
 [Clojure](http://clojure.org/) is a dialect of [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) and a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. It was written by Rich Hickey, and released in 2007. 
 
-Clojure and [ClojureScript](https://clojurescript.org/) differ main in the fact that Clojure runs on the [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) (Java Virtual Machine) platform and compiles down to [Java bytecode](https://en.wikipedia.org/wiki/Java_bytecode), where as ClojureScript compiles to JavaScript. Syntactically Clojure is very minimalistic, mainly expressing itself via [persistent data structures](https://en.wikipedia.org/wiki/Persistent_data_structure). 
+Clojure and [ClojureScript](https://clojurescript.org/) differ mainly in the fact that Clojure runs on the [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) (Java Virtual Machine) platform and compiles down to [Java bytecode](https://en.wikipedia.org/wiki/Java_bytecode), where as ClojureScript compiles to JavaScript. Syntactically Clojure is very minimalistic, expressing itself via [persistent data structures](https://en.wikipedia.org/wiki/Persistent_data_structure). 
 
-Clojure is notated using lists: `(a b c)`, vectors: `[a b c]`, and maps: `{:a 1 :b 2 :c 3}` which act as key value pairs. Clojure uses the Lisp [s-expression](https://en.wikipedia.org/wiki/S-expression) to build it's data structures. For example to add the integers 2 and 4 one would write `(+ 2 4)` which would evaluate to 6. 
+Clojure is notated using lists: `(a b c)`, vectors: `[a b c]`, and maps: `{:a 1 :b 2 :c 3}`, and uses the Lisp [s-expression](https://en.wikipedia.org/wiki/S-expression) to build its data structures. For example to add the integers 2 and 4 one would write `(+ 2 4)` which would evaluate to 6. 
 
 ##Play With Code
 
@@ -56,20 +56,22 @@ It will simply render "Hello world" on the page.
 
 ##Example Explained
 
-This block introduces your project name as the core namespace, requires the reagent core as the symboly reagent, and pulls atom out of the reagent core library. The require statement could be written as `import reagent, { atom } from 'reagent'` in an ES6 JavaScript syntax.
+The following block introduces your project name as the core namespace, requires the reagent core as the symbol `reagent`, and pulls `atom` out of the reagent core library. The require statement could be written as `import reagent, { atom } from 'reagent'` in an ES6 JavaScript syntax.
+
 ```
 (ns <project-name>.core
   (:require
    [reagent.core :as reagent :refer [atom]]
    ))
 ```
-This block defines the app-state as an atom with a key of :text and a value of "Hello world".
+
+The folloing block defines the app-state as an atom with a key of :text and a value of "Hello world".
 
 ```
 (defonce app-state (atom {:text "Hello world"}))
 ```
 
-This block defines a function called hello-world, which accepts no arguments `[]`, followed by a div which contains an h1 element with a value of `(:text @app-state)`. The `@` character is used to dereference the app-state symbol and `:text` pulls out the value contained in the `:text` key.
+The following defines a function called hello-world, which accepts no arguments `[]`, followed by a div which contains an h1 element with a value of `(:text @app-state)`. The `@` character is used to dereference the app-state symbol and `:text` pulls out the value contained in the `:text` key.
 
 ```
 (defn hello-world []
@@ -77,15 +79,14 @@ This block defines a function called hello-world, which accepts no arguments `[]
     [:h1 (:text @app-state)]])
 ```
 
-Finally, this line pulls the render-component function out of the reagent library, passes it the hello-world function, which returns our div containing an h1 with the value of the app-state key, and then uses the `.getElementById` JavaScript function to locate the html element with an id of app, contained in our index.html file in the `resource/public/index.html` file. 
+Finally, this last block pulls the `render-component` function out of the reagent library, passes it the hello-world function, which returns our div containing an h1 with the value of the app-state key. It then uses the `.getElementById` JavaScript function to locate the html element with an id of app, which contained in our index.html file in the `resource/public/index.html` file. 
 
 ```
 (reagent/render-component [hello-world]
   (. js/document (getElementById "app")))
 ```
 
-
-Note that we are explicitly using the reagent library of ClojureScript in this example, which builds on top of the  React framework. This last line is the equivalent of React's:
+Note that we are explicitly using the reagent library with ClojureScript in this example, which builds on top of the React framework. This last line is the equivalent of React's:
 
 ```
 ReactDOM.render(
