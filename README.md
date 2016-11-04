@@ -104,6 +104,8 @@ ReactDOM.render(
 
 [ClojureScript Online REPL](http://clojurescript.net/)
 
+[Clojure Resources Repo](https://github.com/chemouna/ClojureResources)
+
 [Free Online Book on Clojure](http://www.braveclojure.com/foreword/)
 
 [Functional Programming Terms Explained](https://github.com/hemanth/functional-programming-jargon)
